@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import { HeroScene, QuantumComputerScene } from './components/QuantumScene';
 import { SurfaceCodeDiagram, TransformerDecoderDiagram, PerformanceMetricDiagram } from './components/Diagrams';
+import { Timeline } from './components/Timeline';
 import { ArrowDown, Menu, X, BookOpen } from 'lucide-react';
 
 const AuthorCard = ({ name, role, delay }: { name: string, role: string, delay: string }) => {
@@ -146,6 +147,18 @@ const App: React.FC = () => {
               </p>
             </div>
           </div>
+        </section>
+
+        {/* Timeline / History */}
+        <section className="py-24 bg-[#F5F4F0] border-t border-stone-200">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-16">
+                    <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">TIMELINE</div>
+                    <h2 className="font-serif text-3xl md:text-5xl mb-4 text-stone-900">The Road to Neural Decoding</h2>
+                    <p className="text-stone-500 max-w-2xl mx-auto">From theoretical foundations to machine learning breakthroughs.</p>
+                </div>
+                <Timeline />
+            </div>
         </section>
 
         {/* The Science: Surface Code */}
